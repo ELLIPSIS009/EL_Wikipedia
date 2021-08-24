@@ -1,0 +1,15 @@
+{% extends "encyclopedia/layout.html" %}
+
+{% block title %}
+    Edit
+{% endblock %}
+
+{% block body %}
+    <form method="post" >
+        {% csrf_token %}
+        <h2 class="display-4" style="width: 750px;font-size: 50px; margin-bottom: 50px; font-weight: 400;font-size: 60px;">Edit:</h2>
+            {{edit}}
+        <br>
+        <input class="save btn btn-info" type="submit" value="Save" style="font-size: 25px;margin-left: 250px;margin-top: 25px;"/>
+    </form>
+{% endblock %}

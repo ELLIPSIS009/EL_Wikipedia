@@ -1,0 +1,40 @@
+{% load static %}
+
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <title>{% block title %}{% endblock %}</title>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+        <link href="{% static 'encyclopedia/styles.css' %}" rel="stylesheet">
+    </head>
+    <body>
+        <div class="row" style="margin-left: 0px;margin-right: 0px;">
+            <div class="sidebar" style="box-shadow: 0 4px 15px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);">
+                <img src="../../static/encyclopedia/images/1.png" style="height: 135px; width: 200px;">
+                <h2 class="display-3">EL Wiki</h2>
+                <form method="post" action="{% url 'index' %}">
+                {% csrf_token %}
+                    {{form.item}}
+                </form>
+                <br>
+                <div>
+                    <a class="top nav-link" href="{% url 'index' %}" style="text-align: center; border-radius: 25px;color: black; font-size: 20px; background-color:#DADADA ;margin-top: 10px;">Home</a>
+                </div>
+                <div>
+                    <a class="nav-link" href="{% url 'create' %}"style="text-align: center; border-radius: 25px;color: black; font-size: 20px;background-color:#DADADA ;margin-top: 10px;">Create New Page</a>
+                </div>
+                <div>
+                    <a class="nav-link" href="{% url 'random' %}"style="text-align: center; border-radius: 25px;color: black; font-size: 20px;background-color:#DADADA ;margin-top: 10px;">Random Page</a>
+                </div>
+                {% block nav %}
+                {% endblock %}
+            </div>
+            <div class="main" style="padding-left: 50px;">
+                {% block body %}
+                {% endblock %}
+            </div>
+        </div>
+
+    </body>
+</html>
