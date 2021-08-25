@@ -1,6 +1,6 @@
 # EL Wikipedia
 
-Design a Wikipedia-like online encyclopedia using Python, Django, HTML & CSS
+Design a Wikipedia-like online encyclopedia using Python, Django, HTML & CSS.
 
 
 # Description
