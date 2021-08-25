@@ -2,9 +2,6 @@
 
 Design a Wikipedia-like online encyclopedia using Python, Django, HTML & CSS
 
-# Heroku
-
-The project is deployed on Heroku and can be viewed by clicking [HERE](https://el-imdb.herokuapp.com/)
 
 # Description
 
